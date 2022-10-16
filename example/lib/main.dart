@@ -35,7 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool hideContents = false;
-  CustomPainter? painter;
+  FunkyBackgroundPainter painter = NotFunkyBackgroundPainter();
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: CustomPaint(
+        child: FunkyBackground(
           painter: painter,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
-                          painter = FunkyRotatingLines(Colors.blue);
+                          painter = const FunkyRotatingLines(Colors.blue);
                         });
                       },
                       child: const Text('FunkyRotatingLines'),
@@ -145,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
-                          painter = FunkyStretchedTriangles(Colors.cyan);
+                          painter = const FunkyStretchedTriangles(Colors.cyan);
                         });
                       },
                       child: const Text('FunkyStretchedTriangles'),
@@ -160,4 +160,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+class NotFunkyBackgroundPainter extends FunkyBackgroundPainter {
+  @override
+  void paint(Canvas canvas, Size size) {}
 }
