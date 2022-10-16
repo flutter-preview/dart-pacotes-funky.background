@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
+part of 'funky_background_painter.dart';
 
-class FunkyHorizontalTriangles extends CustomPainter {
+class FunkyHorizontalTriangles extends FunkyBackgroundPainter {
   final Color color;
 
-  FunkyHorizontalTriangles(this.color);
+  const FunkyHorizontalTriangles(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -20,19 +20,12 @@ class FunkyHorizontalTriangles extends CustomPainter {
     path.lineTo(size.width / 2, size.height / 2);
     canvas.drawPath(path, paint);
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyShiftedTriangle extends CustomPainter {
+class FunkyShiftedTriangle extends FunkyBackgroundPainter {
   final Color color;
 
-  FunkyShiftedTriangle(this.color);
+  const FunkyShiftedTriangle(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -55,19 +48,12 @@ class FunkyShiftedTriangle extends CustomPainter {
 
     canvas.drawPath(shifted, paint);
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyLateralTriangles extends CustomPainter {
+class FunkyLateralTriangles extends FunkyBackgroundPainter {
   final Color color;
 
-  FunkyLateralTriangles(this.color);
+  const FunkyLateralTriangles(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -95,19 +81,12 @@ class FunkyLateralTriangles extends CustomPainter {
     canvas.drawPath(path, paint);
     canvas.drawPath(secondPath, secondPaint);
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyStretchedTriangles extends CustomPainter {
+class FunkyStretchedTriangles extends FunkyBackgroundPainter {
   final Color color;
 
-  FunkyStretchedTriangles(this.color);
+  const FunkyStretchedTriangles(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -133,12 +112,5 @@ class FunkyStretchedTriangles extends CustomPainter {
 
     canvas.drawPath(path, paint);
     canvas.drawPath(secondPath, secondPaint);
-  }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:funky_backgrounds/funky_backgrounds.dart';
 
-class PositionedCustomPaint extends StatelessWidget {
+class PositionedFunkyBackground extends StatelessWidget {
   final double? start;
   final double? top;
   final double? end;
@@ -9,9 +10,9 @@ class PositionedCustomPaint extends StatelessWidget {
   final double? height;
   final Size size;
   final Widget? child;
-  final CustomPainter painter;
+  final FunkyBackgroundPainter painter;
 
-  const PositionedCustomPaint({
+  const PositionedFunkyBackground({
     Key? key,
     this.start,
     this.top,
@@ -33,7 +34,7 @@ class PositionedCustomPaint extends StatelessWidget {
       end: end,
       height: height,
       width: width,
-      child: CustomPaint(
+      child: FunkyBackground(
         size: size,
         painter: painter,
         child: child,

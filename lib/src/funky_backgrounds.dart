@@ -1,4 +1,2 @@
-export 'conic_curves.dart';
-export 'lines.dart';
-export 'triangles.dart';
+export 'painters/painters.dart';
 export 'widgets/widgets.dart';
