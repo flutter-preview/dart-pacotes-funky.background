@@ -15,6 +15,8 @@ return Scaffold(
     );
 ```
 
+If you want to use a funky background in a positioned layout (e.g., Stack), you can use the `PositionedFunkyBackground` widget.
+
 ## Features
 
 Below you can find screenshots of the available funky painters.
