@@ -21,9 +21,9 @@ If you want to use a funky background in a positioned layout (e.g., Stack), you 
 
 Below you can find screenshots of the available funky painters.
 
-|Conic Curve|Rotating Lines|Bezier Lines|Horizontal Triangles|Shifted Triangle|Lateral Triangles|Stretched Triangles|
-|-----------|--------------|------------|--------------------|----------------|-----------------|-------------------|
-|![conic curve](example/art/conic_curve.png)|![rotating lines](example/art/rotating_lines.png)|![bezier lines](example/art/bezier_lines.png)|![horizontal triangles](example/art/horizontal_triangles.png)|![shifted triangle](example/art/shifted_triangle.png)|![lateral triangles](example/art/lateral_triangles.png)|![stretched triangles](example/art/stretched_triangles.png)|
+|Conic Curve|Rotating Lines|Bezier Lines|Horizontal Triangles|Shifted Triangle|Lateral Triangles|Stretched Triangles| Square Grid |
+|-----------|--------------|------------|--------------------|----------------|-----------------|-------------------|----------|
+|![conic curve](example/art/conic_curve.png)|![rotating lines](example/art/rotating_lines.png)|![bezier lines](example/art/bezier_lines.png)|![horizontal triangles](example/art/horizontal_triangles.png)|![shifted triangle](example/art/shifted_triangle.png)|![lateral triangles](example/art/lateral_triangles.png)|![stretched triangles](example/art/stretched_triangles.png)| ![square grid](example/art/square_grid.png) |
 
 ---
 
