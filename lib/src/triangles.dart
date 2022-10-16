@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FunkyHorizontalTriangles extends CustomPainter {
   final Color color;
 
-  FunkyHorizontalTriangles(this.color);
+  const FunkyHorizontalTriangles(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -32,7 +32,7 @@ class FunkyHorizontalTriangles extends CustomPainter {
 class FunkyShiftedTriangle extends CustomPainter {
   final Color color;
 
-  FunkyShiftedTriangle(this.color);
+  const FunkyShiftedTriangle(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -67,7 +67,7 @@ class FunkyShiftedTriangle extends CustomPainter {
 class FunkyLateralTriangles extends CustomPainter {
   final Color color;
 
-  FunkyLateralTriangles(this.color);
+  const FunkyLateralTriangles(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -107,7 +107,7 @@ class FunkyLateralTriangles extends CustomPainter {
 class FunkyStretchedTriangles extends CustomPainter {
   final Color color;
 
-  FunkyStretchedTriangles(this.color);
+  const FunkyStretchedTriangles(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FunkyConicCurve extends CustomPainter {
   final Color color;
 
-  FunkyConicCurve(this.color);
+  const FunkyConicCurve(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {

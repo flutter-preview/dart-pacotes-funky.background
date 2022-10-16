@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FunkyRotatingLines extends CustomPainter {
   final Color color;
 
-  FunkyRotatingLines(this.color);
+  const FunkyRotatingLines(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -37,7 +37,7 @@ class FunkyRotatingLines extends CustomPainter {
 class FunkyBezierLines extends CustomPainter {
   final Color color;
 
-  FunkyBezierLines(this.color);
+  const FunkyBezierLines(this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
