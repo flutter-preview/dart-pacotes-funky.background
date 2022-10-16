@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+part of 'funky_background_painter.dart';
 
-class FunkyRotatingLines extends CustomPainter {
+class FunkyRotatingLines extends FunkyBackgroundPainter {
   final Color color;
 
   const FunkyRotatingLines(this.color);
@@ -25,16 +25,9 @@ class FunkyRotatingLines extends CustomPainter {
       );
     }
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyBezierLines extends CustomPainter {
+class FunkyBezierLines extends FunkyBackgroundPainter {
   final Color color;
 
   const FunkyBezierLines(this.color);
@@ -61,12 +54,5 @@ class FunkyBezierLines extends CustomPainter {
 
       canvas.drawPath(path, paint);
     }
-  }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
   }
 }

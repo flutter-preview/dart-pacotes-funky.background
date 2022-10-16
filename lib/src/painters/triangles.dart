@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+part of 'funky_background_painter.dart';
 
-class FunkyHorizontalTriangles extends CustomPainter {
+class FunkyHorizontalTriangles extends FunkyBackgroundPainter {
   final Color color;
 
   const FunkyHorizontalTriangles(this.color);
@@ -20,16 +20,9 @@ class FunkyHorizontalTriangles extends CustomPainter {
     path.lineTo(size.width / 2, size.height / 2);
     canvas.drawPath(path, paint);
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyShiftedTriangle extends CustomPainter {
+class FunkyShiftedTriangle extends FunkyBackgroundPainter {
   final Color color;
 
   const FunkyShiftedTriangle(this.color);
@@ -55,16 +48,9 @@ class FunkyShiftedTriangle extends CustomPainter {
 
     canvas.drawPath(shifted, paint);
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyLateralTriangles extends CustomPainter {
+class FunkyLateralTriangles extends FunkyBackgroundPainter {
   final Color color;
 
   const FunkyLateralTriangles(this.color);
@@ -95,16 +81,9 @@ class FunkyLateralTriangles extends CustomPainter {
     canvas.drawPath(path, paint);
     canvas.drawPath(secondPath, secondPaint);
   }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
-  }
 }
 
-class FunkyStretchedTriangles extends CustomPainter {
+class FunkyStretchedTriangles extends FunkyBackgroundPainter {
   final Color color;
 
   const FunkyStretchedTriangles(this.color);
@@ -133,12 +112,5 @@ class FunkyStretchedTriangles extends CustomPainter {
 
     canvas.drawPath(path, paint);
     canvas.drawPath(secondPath, secondPaint);
-  }
-
-  @override
-  bool shouldRepaint(
-    covariant CustomPainter oldDelegate,
-  ) {
-    return false;
   }
 }
