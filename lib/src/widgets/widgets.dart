@@ -1,2 +1,2 @@
-export 'positioned_custom_paint.dart';
 export 'funky_background.dart';
+export 'positioned_funky_background.dart';
