@@ -27,6 +27,43 @@ class FunkyRotatingLines extends FunkyBackgroundPainter {
   }
 }
 
+class FunkySquareGrid extends FunkyBackgroundPainter {
+  final Color color;
+
+  const FunkySquareGrid(this.color);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color.withOpacity(.15)
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 2.0;
+
+    for (var i = 0.0; i < size.height; i += 5.0) {
+      canvas.drawLine(
+        const Offset(0, 0),
+        Offset(size.width, size.height - i),
+        paint,
+      );
+      canvas.drawLine(
+        Offset(0, size.height),
+        Offset(size.width, size.height - i),
+        paint,
+      );
+      canvas.drawLine(
+        Offset(size.width, 0),
+        Offset(0, size.height - i),
+        paint,
+      );
+      canvas.drawLine(
+        Offset(size.width, size.height),
+        Offset(0, size.height - i),
+        paint,
+      );
+    }
+  }
+}
+
 class FunkyBezierLines extends FunkyBackgroundPainter {
   final Color color;
 

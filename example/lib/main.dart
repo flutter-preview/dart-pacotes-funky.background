@@ -35,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool hideContents = false;
+  bool hideButtons = false;
   FunkyBackgroundPainter painter = NotFunkyBackgroundPainter();
 
   @override
@@ -43,6 +44,16 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                hideButtons = !hideButtons;
+              });
+            },
+            icon: Icon(
+              hideButtons ? Icons.radio_button_off : Icons.radio_button_checked,
+            ),
+          ),
           IconButton(
             onPressed: () {
               setState(() {
@@ -80,80 +91,92 @@ class _MyHomePageState extends State<MyHomePage> {
                   separatorBuilder: (_, __) => const SizedBox(height: 32),
                 ),
               ),
-              SizedBox(
-                height: 50,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = FunkyConicCurve(Colors.red[200]!);
-                        });
-                      },
-                      child: const Text('FunkyConicCurve'),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = const FunkyRotatingLines(Colors.blue);
-                        });
-                      },
-                      child: const Text('FunkyRotatingLines'),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = FunkyBezierLines(Colors.pink[100]!);
-                        });
-                      },
-                      child: const Text('FunkyBezierLines'),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = FunkyHorizontalTriangles(
-                            Colors.green[200]!,
-                          );
-                        });
-                      },
-                      child: const Text('FunkyHorizontalTriangles'),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = FunkyShiftedTriangle(Colors.purple[200]!);
-                        });
-                      },
-                      child: const Text('FunkyShiftedTriangle'),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = FunkyLateralTriangles(Colors.yellow[200]!);
-                        });
-                      },
-                      child: const Text('FunkyLateralTriangles'),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          painter = const FunkyStretchedTriangles(Colors.cyan);
-                        });
-                      },
-                      child: const Text('FunkyStretchedTriangles'),
-                    ),
-                    const SizedBox(width: 16),
-                  ],
+              if (!hideButtons)
+                SizedBox(
+                  height: 50,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter = FunkyConicCurve(Colors.red[200]!);
+                          });
+                        },
+                        child: const Text('FunkyConicCurve'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter = const FunkyRotatingLines(Colors.blue);
+                          });
+                        },
+                        child: const Text('FunkyRotatingLines'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter = const FunkySquareGrid(Colors.deepOrange);
+                          });
+                        },
+                        child: const Text('FunkySquareGrid'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter = FunkyBezierLines(Colors.pink[100]!);
+                          });
+                        },
+                        child: const Text('FunkyBezierLines'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter = FunkyHorizontalTriangles(
+                              Colors.green[200]!,
+                            );
+                          });
+                        },
+                        child: const Text('FunkyHorizontalTriangles'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter = FunkyShiftedTriangle(Colors.purple[200]!);
+                          });
+                        },
+                        child: const Text('FunkyShiftedTriangle'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter =
+                                FunkyLateralTriangles(Colors.yellow[200]!);
+                          });
+                        },
+                        child: const Text('FunkyLateralTriangles'),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            painter =
+                                const FunkyStretchedTriangles(Colors.cyan);
+                          });
+                        },
+                        child: const Text('FunkyStretchedTriangles'),
+                      ),
+                      const SizedBox(width: 16),
+                    ],
+                  ),
                 ),
-              ),
             ],
           ),
         ),
